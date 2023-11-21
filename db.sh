@@ -1,0 +1,1 @@
+sudo docker run --name postgres -e "POSTGRES_PASSWORD=mysecretpassword" --restart unless-stopped --mount source=recipe-book-postgres,target=/var/lib/pgsql/data -p 5432:5432 -d postgres:latest
