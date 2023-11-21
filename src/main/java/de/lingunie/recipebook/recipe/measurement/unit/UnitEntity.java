@@ -1,27 +1,33 @@
-package de.lingunie.recipebook.food;
+package de.lingunie.recipebook.recipe.measurement.unit;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AccessLevel;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
+@Table(name = "unit")
 @Getter(AccessLevel.PACKAGE)
 @Setter(AccessLevel.PACKAGE)
-public class FoodEntity {
+public class UnitEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
+    private String abbreviation;
 
-    FoodEntity(final String name) {
+    UnitEntity(
+            final String name,
+            final String abbreviation
+    ) {
         this.name = name;
+        this.abbreviation = abbreviation;
     }
 }

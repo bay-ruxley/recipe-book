@@ -1,27 +1,21 @@
-package de.lingunie.recipebook.food;
+package de.lingunie.recipebook.recipe.instruction;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
-import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.dialect.InnoDBStorageEngine;
 
-@Entity
-@NoArgsConstructor
 @Getter(AccessLevel.PACKAGE)
 @Setter(AccessLevel.PACKAGE)
-public class FoodEntity {
+@Entity
+public class InstructionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    private String name;
-
-    FoodEntity(final String name) {
-        this.name = name;
-    }
+    private String instruction;
 }
