@@ -30,4 +30,8 @@ public class UnitEntity {
         this.name = name;
         this.abbreviation = abbreviation;
     }
+
+    UnitEntity(final UnitCreationDto unitCreationDto) {
+        this(unitCreationDto.name(), unitCreationDto.abbreviation());
+    }
 }

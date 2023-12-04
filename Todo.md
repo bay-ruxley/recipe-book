@@ -43,6 +43,7 @@
   - [ ] Own microservice
 - [ ] logging
   - [ ] some ui for logs
+  - [ ] own slf4j2 implementation?
 - [ ] statistics
 - [ ] Hibernate model generation
   - [ ] Maybe even for non jpa models / creation models and error messages

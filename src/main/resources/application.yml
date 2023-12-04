@@ -4,10 +4,10 @@
 #    username: 'postgres'
 #    password: 'mysecretpassword'
 #    driver-class-name: 'org.postgresql.Driver'
-  jpa:
-    open-in-view: false
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
+#   jpa:
+#     open-in-view: false
+# logging:
+#   level:
+#     org:
+#       springframework:
+#         security: DEBUG
